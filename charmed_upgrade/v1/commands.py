@@ -12,4 +12,7 @@ class UpgradePrep(command.Command):
         return parser
 
     def take_action(self, parser_args):
+        client = getattr(self.app.client_manager, "charmed-upgrade")
         logger.warning(f"upgrade prep called with {parser_args.dummy}")
+        logger.warning(f"client.foo = {client.foo}")
+        return 1

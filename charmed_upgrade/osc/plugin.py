@@ -3,7 +3,7 @@ from osc_lib import utils
 DEFAULT_API_VERSION = '1'
 
 # Required by the OSC plugin interface
-API_NAME = 'charmed_upgrade'
+API_NAME = 'charmed-upgrade'
 API_VERSION_OPTION = 'os_charmed_upgrade_api_version'
 API_VERSIONS = {
     '1': 'charmed_upgrade.v1.client.Client',
@@ -37,9 +37,9 @@ def build_option_parser(parser):
         initialized by OpenStackShell.
     """
     parser.add_argument(
-        '--os-oscplugin-api-version',
-        metavar='<oscplugin-api-version>',
-        help='OSC Plugin API version, default=' +
+        '--os-charmed-upgrade-api-version',
+        metavar='<charmed-upgrade-api-version>',
+        help='Charmed Upgrade Plugin API version, default=' +
              DEFAULT_API_VERSION +
-             ' (Env: OS_OSCPLUGIN_API_VERSION)')
+             ' (Env: OS_CHARMED_UPGRADE_API_VERSION)')
     return parser

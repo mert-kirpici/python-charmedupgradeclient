@@ -1,3 +1,3 @@
 class Client:
     def __init__(self):
-        pass
+        self.foo = "foo"
